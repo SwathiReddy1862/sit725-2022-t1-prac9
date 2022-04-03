@@ -1,5 +1,5 @@
 {
-  "name": "sit725-2022-t1-prac3",
+  "name": "sit725-2022-t1-prac4",
   "version": "1.0.0",
   "description": "express app",
   "main": "server.js",
@@ -9,16 +9,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SwathiReddy1862/sit725-2022-t1-prac3.git"
+    "url": "git+https://github.com/SwathiReddy1862/sit725-2022-t1-prac4.git"
   },
   "author": "Swathi Chandrasekhar",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SwathiReddy1862/sit725-2022-t1-prac3/issues"
+    "url": "https://github.com/SwathiReddy1862/sit725-2022-t1-prac4/issues"
   },
-  "homepage": "https://github.com/SwathiReddy1862/sit725-2022-t1-prac3#readme",
+  "homepage": "https://github.com/SwathiReddy1862/sit725-2022-t1-prac4#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.3",
+    "mongodb": "^4.4.1",
     "nodemon": "^2.0.15"
   }
 }
