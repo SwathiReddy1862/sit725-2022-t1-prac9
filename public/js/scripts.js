@@ -67,6 +67,8 @@ const getProjects = () => {
     });
 };
 
+
+
 $(document).ready(function(){
     $('.materialboxed').materialbox();
     $('#formSubmit').click(()=>{

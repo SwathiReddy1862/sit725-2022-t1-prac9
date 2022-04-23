@@ -72,6 +72,26 @@ app.post('/api/projects', (req,res) => {
     });
 });
 
+//adding two numbers
+const addNumbers = (number1, number2) => {
+    var num1 = parseInt(number1)
+    var num2 = parseInt(number2)
+    var result = (num1 + num2) || null;
+    return result;
+}
+
+app.get("/addTwoNumbers/:firstNumber/:secondNumber",(req,res) => {
+    var number1 = req.params.firstNumber;
+    var number2 = req.params.secondNumber;
+    var result = addNumbers(number1,number2)
+    if(result == null) {
+        res.json({result: result, statusCode: 400}).status(400)
+      }
+      else { res.json({result: result, statusCode: 200}).status(200) } 
+})
+
+
+
 app.listen(port  , ()=>{
     console.log(" app listening to: "+port)
     createCollection(" pets ")
