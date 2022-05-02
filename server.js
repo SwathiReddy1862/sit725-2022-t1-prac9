@@ -90,7 +90,16 @@ app.get("/addTwoNumbers/:firstNumber/:secondNumber",(req,res) => {
       else { res.json({result: result, statusCode: 200}).status(200) } 
 })
 
-
+io.on('connection', (socket) => {
+    console.log('a user connected', socket.id);
+    socket.on('disconnect', () => {
+      console.log('user disconnected');
+    });
+    setInterval(()=>{
+      socket.emit('number', new Date().toISOString());
+    }, 1000);
+  
+  });
 
 app.listen(port  , ()=>{
     console.log(" app listening to: "+port)
