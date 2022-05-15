@@ -5,6 +5,12 @@ var cors = require("cors");
 const MongoClient = require("mongodb").MongoClient;
 let projectCollection;
 
+require('dotenv').config()
+let dbConnect = require("./dbConnect");
+let projectRoutes = require("./routes/projectRoute");
+let userRoute = require("./routes/userRoute");
+let http = require('http').createServer(app);
+let io = require('socket.io')(http);
 
 app.use(express.static(__dirname + '/public'))
 app.use(express.json())
